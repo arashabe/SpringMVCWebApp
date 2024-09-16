@@ -11,7 +11,7 @@
 	<groupId>com.spring</groupId>
 	<artifactId>ums</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ums</name>
+	<name>ums-WebApp</name>
 	<description>Spring Boot University Students Management</description>
 	<!-- Proprietà per la versione di Java -->
 	<properties>
