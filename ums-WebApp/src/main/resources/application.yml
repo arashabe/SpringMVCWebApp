@@ -1,0 +1,19 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  application:
+    name: springboot-student-management
+  datasource:
+    url: jdbc:h2:mem:student_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  error:
+    include-message: always

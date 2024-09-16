@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="http://localhost:35729/livereload.js"></script>
+
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Notifications</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .table {
+            background-color: #fff;
+        }
+
+        th, td {
+            text-align: center;
+        }
+
+        .table-secondary td {
+            background-color: #f8f9fa !important;
+        }
+
+        .action-buttons {
+            text-align: center;
+        }
+
+        .btn-accept, .btn-reject {
+            margin-right: 5px;
+        }
+    </style>
+    <!-- JavaScript functions for accepting and rejecting notifications -->
+    <script>
+        function acceptNotification(notificationId) {
+            $.post("/notifications/accept-notification/" + notificationId, function(data) {
+                // Puoi aggiornare la pagina o fare altre operazioni dopo aver accettato la notifica
+                window.location.reload();
+            });
+        }
+
+        function rejectNotification(notificationId) {
+            $.post("/notifications/reject-notification/" + notificationId, function(data) {
+                // Puoi aggiornare la pagina o fare altre operazioni dopo aver rifiutato la notifica
+                window.location.reload();
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" th:href="@{/}" th:text="'Dashboard of ' + ${#authentication.principal.firstName}">Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/profile}" >View Profile</a></li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/change-password}">Change Password</a></li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/search}">Search</a></li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/notifications}">Notifications</a></li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/logout}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
+    <div class="container mt-5 mb-5">
+
+
+        <!-- Tabella o elenco di richieste di gruppo -->
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">Creation Date</th>
+                    <th scope="col">Topic</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="notification, iterStat : ${notifications}" class="table-secondary">
+                    <td th:text="${iterStat.count}"></td>
+                    <td th:text="${notification.message}"></td>
+                    <td th:text="${#temporals.format(notification.creationDate, 'yyyy-MM-dd HH:mm')}"></td>
+                    <td th:text="${notification.recipientSkills}"></td>
+                    <td class="action-buttons">
+                        <!-- Mostra il pulsante Accept solo se lo stato non è Accepted -->
+                        <button th:if="${notification.status ne 'Accepted' and notification.status ne 'Rejected'}" type="button" class="btn btn-success btn-accept"
+                                th:onclick="'javascript:acceptNotification(' + ${notification.id} + ')'">Accept</button>
+                        <!-- Mostra il pulsante Rejected solo se lo stato non è Rejected -->
+						<button th:if="${notification.status ne 'Rejected' and notification.status ne 'Accepted'}" type="button" class="btn btn-danger btn-reject"
+						        th:onclick="'javascript:rejectNotification(' + ${notification.id} + ')'">Reject</button>
+						
+						<!-- Mostra il messaggio Accepted solo se lo stato è Accepted -->
+						<span th:if="${notification.status eq 'Accepted'}" class="text-success">Accepted</span>
+						<!-- Mostra il messaggio Rejected solo se lo stato è Rejected -->
+						<span th:if="${notification.status eq 'Rejected'}" class="text-danger">Rejected</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+        <!-- Footer -->
+    <footer class="bg-dark text-white py-2 fixed-bottom">
+        <div class="container text-center">
+            <p>&copy; 2023 UMS. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

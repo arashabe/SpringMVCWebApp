@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://localhost:35729/livereload.js"></script>
+    <title>UMS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style>
+		.card-title {
+    		font-weight: bold;
+    		color: rgb(255, 255, 255);
+					}
+	</style>
+	
+
+    </head>
+
+    <body>
+        <!-- Navigation bar (header) -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#" th:href="@{/}" th:text="'Dashboard of ' + ${#authentication.principal.firstName}">Dashboard</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/profile}">View Profile</a></li>
+                        <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/change-password}">Change Password</a></li>
+                        <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/search}">Search</a></li>
+                        <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/notifications}">Notifications</a></li>
+                        <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/logout}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br>
+        <br>
+        <div class="container mb-5">
+       
+
+            <!-- Messaggio di benvenuto e notifica in una sola riga -->
+            <div class="row g-0 text-center mt-4 mb-4" th:if="${userNotifications != null and userNotifications.size() > 0 and userNotifications.?[!(status eq 'Accepted' or status eq 'Rejected')].size() > 0}">
+                <div class="col-sm-12 text-left">
+                    <p>Welcome, <span sec:authentication="principal.firstName">User</span>. You have new messages.
+                        <a th:href="@{/notifications}" class="btn btn-primary ml-auto">View Requests</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Messaggio "here you can find all your active groups" -->
+            <p class="mt-4 mb-4"><span sec:authentication="principal.firstName">User</span>, here you can find all your active groups.</p>
+
+            <!-- Utilizza la card di Bootstrap per visualizzare le notifiche -->
+            <div class="row">
+                <div th:each="notification : ${userNotifications}" th:if="${notification.status eq 'Accepted'}" class="col-lg-4 mb-3">
+                    <div class="card text-center bg-primary text-white" style="max-width: 300px;">
+                        <div class="card-body">
+                            <h4 class="card-title" th:text="'Topic: ' +${notification.recipientSkills}">Group's Topic</h4>
+                            <ul class="list-group list-group-flush">
+								<li class="list-group-item bg-primary text-white" style="text-align: center; font-weight: bold;">Members:</li>
+                                <li class="list-group-item bg-primary text-white" th:text="${notification.recipientEmail}" style="text-align: center;">Members</li>
+                                <li class="list-group-item bg-primary text-white" th:text="${notification.senderEmail}" style="text-align: center;">Members</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="bg-dark text-white py-2 fixed-bottom">
+                <div class="container text-center">
+                    <p>&copy; 2023 UMS. All rights reserved.</p>
+                </div>
+            </footer>
+            <!-- Bootstrap JS and jQuery (make sure to include them after Bootstrap CSS) -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        </body>
+    </html>

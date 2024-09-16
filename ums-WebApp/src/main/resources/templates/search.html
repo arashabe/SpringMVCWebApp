@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://localhost:35729/livereload.js"></script>
+    <title>User Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .table {
+            background-color: #fff; /* Colore di sfondo bianco */
+        }
+
+        th, td {
+            text-align: center; /* Allinea il testo al centro nelle celle */
+        }
+
+        .table-secondary td {
+            background-color: #f8f9fa !important; /* Colore di sfondo grigio chiaro per le righe della tabella */
+        }
+        .action-buttons {
+            text-align: center; /* Allinea i pulsanti al centro */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Colore di sfondo blu per il pulsante "Group Request" */
+            border-color: #007bff; /* Colore del bordo blu */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Colore di sfondo blu più scuro al passaggio del mouse */
+            border-color: #0056b3; /* Colore del bordo blu più scuro */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" th:href="@{/}" th:text="'Dashboard of ' + ${#authentication.principal.firstName}">Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/profile}" >View Profile</a></li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/change-password}">Change Password</a></li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/search}">Search</a></li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/notifications}">Notifications</a></li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" th:href="@{/logout}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+
+	<div class="container mt-5 mb-5">
+	    <form th:action="@{/search}" method="get">
+	        <div class="form-group">
+	            <label for="messageInput">Search for Users:</label>
+	            <input type="text" class="form-control" id="messageInput" name="query" placeholder="Enter search query">
+	        </div>
+	        <button type="submit" class="btn btn-primary">Search</button>
+	    </form>
+	
+		<!-- Mostra i risultati solo se la lista non è vuota -->
+		<div th:if="${searchResults != null and not #lists.isEmpty(searchResults)}">
+		    <h4 class="mt-4 mb-4">Search Results:</h4>
+		    <table class="table">
+		        <thead class="thead-dark">
+		            <tr>
+		                <th scope="col">#</th>
+		                <th scope="col">First Name</th>
+		                <th scope="col">Last Name</th>
+		                <th scope="col">Skills</th>
+		                <th scope="col">Actions</th> 
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <!-- Itera sugli utenti e mostra le informazioni nella tabella -->
+		            <tr th:each="user, iterStat : ${searchResults}" class="table-secondary">
+		                <!-- Controlla se l'utente corrente è uguale all'utente nel risultato -->
+						<th scope="row" th:text="${iterStat.count}"></th>
+						<td th:text="${user.firstName}"></td>
+						<td th:text="${user.lastName}"></td>
+						<td th:text="${user.skills}"></td>
+		                <td th:if="${user.email != #authentication.principal.username}">
+							
+							<form th:action="@{/notifications/send-group-request}" method="post">
+							    <input type="hidden" name="recipientEmail" th:value="${user.email}" />
+							    <button type="submit" class="btn btn-primary">Group Request</button>
+							</form>
+
+		                </td>
+		            </tr>
+		        </tbody>
+		    </table>
+		    
+		</div>
+
+
+		
+		<!-- Messaggio quando la lista dei risultati è vuota -->
+		<div th:unless="${searchResults != null and not #lists.isEmpty(searchResults)}">
+		    <p>Nessun risultato trovato per la tua ricerca.</p>
+		</div>
+
+	</div>
+
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+        <!-- Footer -->
+    <footer class="bg-dark text-white py-2 fixed-bottom">
+        <div class="container text-center">
+            <p>&copy; 2023 UMS. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
