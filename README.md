@@ -45,7 +45,7 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
    mvn spring-boot:run
 5. **Accedi all'Applicazione Apri il tuo browser e vai su http://localhost:8080.**
 
-### Documentazione
+### Indice
 
 - [Introduzione](https://github.com/arashabe/ums/blob/main/Introduzione.md)
 - [Specifiche dei Requisiti](https://github.com/arashabe/ums/blob/main/Documento%20di%20Specifica%20dei%20Requisiti%20Software.md)
