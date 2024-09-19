@@ -22,7 +22,7 @@ Il **University Management System (UMS)** è una web app progettata per facilita
 
 ## Modello di Sviluppo
 
-Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In particolare, abbiamo adottato il modello Agile in coppia. I programmatori John e Luca hanno lavorato insieme in modo iterativo e incrementale per garantire una consegna continua di valore e una risposta rapida ai cambiamenti nei requisiti.
+Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In particolare, abbiamo adottato il modello Agile in coppia. I programmatori Arash e Daniele hanno lavorato insieme in modo iterativo e incrementale per garantire una consegna continua di valore e una risposta rapida ai cambiamenti nei requisiti.
 
 ### Caratteristiche del Modello Agile Utilizzato
 
@@ -47,9 +47,10 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
 
 ### Documentazione
 
-- Specifiche dei Requisiti
-- Design dell'Architettura
-- Testing Dinamico
+- [Specifiche dei Requisiti](https://github.com/arashabe/ums/blob/main/Documento%20di%20Specifica%20dei%20Requisiti%20Software.md)
+- [Design dell'Architettura](https://github.com/arashabe/ums/blob/main/Documento%20di%20Design%20dell%E2%80%99Architettura%20Software.md)
+- [Documenti per l’Analisi Dinamica](https://github.com/arashabe/ums/blob/main/Documenti%20per%20l%E2%80%99Analisi%20Dinamica%20Junit.md)
+- [Documento di Testing delle API con Postman](https://github.com/arashabe/ums/blob/main/Documento%20di%20Testing%20delle%20API%20con%20Postman.md)
 
 ### Contributori
 
