@@ -33,17 +33,17 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
 
 ## Istruzioni per l'Esecuzione del Progetto
 
-1. **Clonare il Repository**:
+1. **Clonare il repository**:
    ```bash
    git clone https://github.com/tuo-username/ums.git
   
-2. **Navigare nella Cartella del Progetto**:
+2. **Navigare nella cartella del progetto**:
    ```bash
    cd ums
-4. **Costruire e Avviare l'Applicazione**:
+4. **Costruire e avviare l'applicazione**:
    ```bash
    mvn spring-boot:run
-5. **Accedere all'Applicazione Aprire il browser e andare su http://localhost:8080.**
+5. **Accedere all'applicazione aprire il browser e andare su http://localhost:8080.**
 
 ### Indice
 
