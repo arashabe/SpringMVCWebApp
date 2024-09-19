@@ -47,6 +47,7 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
 
 ### Documentazione
 
+- [Introduzione](https://github.com/arashabe/ums/blob/main/Introduzione.md)
 - [Specifiche dei Requisiti](https://github.com/arashabe/ums/blob/main/Documento%20di%20Specifica%20dei%20Requisiti%20Software.md)
 - [Design dell'Architettura](https://github.com/arashabe/ums/blob/main/Documento%20di%20Design%20dell%E2%80%99Architettura%20Software.md)
 - [Documenti per l’Analisi Dinamica](https://github.com/arashabe/ums/blob/main/Documenti%20per%20l%E2%80%99Analisi%20Dinamica%20Junit.md)
