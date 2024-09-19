@@ -38,17 +38,11 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
 
 ## Istruzioni per l'Esecuzione del Progetto
 
-1. **Clonare il repository**:
-   ```bash
-   git clone https://github.com/arashabe/ums.git
-  
-2. **Navigare nella cartella del progetto**:
-   ```bash
-   cd ums
-4. **Costruire e avviare l'applicazione**:
-   ```bash
-   mvn spring-boot:run
-5. **Accedere all'applicazione tramite un browser e l'indirizzo: http://localhost:8080.**
+1. **Clonare il Repository**: Utilizzare git clone per clonare il repository sul proprio ambiente locale.
+2. **Importare il progetto in STS**: Aprire Spring Tool Suite (STS) e importare il progetto come Maven Project.
+3. **Installare le Dipendenze**: Una volta importato, STS scaricherà automaticamente le dipendenze del progetto.
+4. **Avviare l'applicazione**: selezionare Run As > Spring Boot App per avviare l'applicazione.
+5. **Accedere all'applicazione**:Aprire il browser e navigare su http://localhost:8080.
 
 ## Indice
 
