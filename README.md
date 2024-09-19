@@ -35,7 +35,7 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
 
 1. **Clonare il repository**:
    ```bash
-   git clone https://github.com/tuo-username/ums.git
+   git clone https://github.com/arashabe/ums.git
   
 2. **Navigare nella cartella del progetto**:
    ```bash
