@@ -8,9 +8,9 @@ Implementare la funzionalità per visualizzare e cercare utenti all'interno del 
 - Gli utenti ricevono notifiche quando vengono invitati a un gruppo di studio.
 
 #### 2. Design UML
-- **Diagramma delle classi**: Includere le classi `Notification`, `UserProfile`, `SearchController`, e `NotificationController`.
+- **Diagramma delle classi**: Includere le classi `Notification`, `SearchController`, e `NotificationController`.
   
-![Class Diagram](https://www.planttext.com/api/plantuml/png/dLNHJi8m57tVLpHxGWb4NuaXHYM6H968V43jBkFgQ6VROOpXtsqtb7PjNzmJxDnxUkwvPzkrqbJgPbTbMKtPEos1v3EkKIEed7ndn5oieagHXT2uGKOr2du4x3KYM4p8d6ieGJft5V02v6n7iPgGbPR8ImULmB16u3fLi0EbZ9W8OWJhHWN0a9IWvyNWB1GpD68iv0WrLNk1XT-zEacsDC41oY-9J1YbVVPcJJ7tgk86HVaVEwjInBzmpz6u0wstoU4xr5-0otF8dBoi5SYb51kim8jBO-xFev5vHH7PTzrnB97fHi9QXcbffQzRskJwZt3lyAW9DoXI3bZ8KHbjN_RrfiZ2mkIelia7vrcz5LnBKLKWUu_h2gXasnCSx605Se_Cv65z-kC9jFqMKuEF1kINe-K1bRwoqDtBqzJjsOhFxjnb64Wl7ExB9A6HEoL_MXVXpTxvRaKgoRoubwAfdy4CfdGR2ZD9vuJv4MkYZ46jNVA1Az3FLD0juGtOFxhRNIUy6e-dCJl8n6vNPS7-RRspwj-w17j-cPFpqOZa5-FnUUw__2TaHxbPiCgoQ-Eb_NZy0000)
+![Class Diagram](https://www.planttext.com/api/plantuml/png/dLH1JiCm4Bpx5LPEeLKZk4QeGe8ALOA26dY0vIof8N62lIb2g7_79fJQYNqXfyGpEvwTNULA8rFODpKX7UDlh0AQh2GA5A0J-aMeUNZDjAQR5iMBu0n5Aty1-ooeA7EwbWWLAETKWon1hHecwfmMg8Ii75G15vq0YJ520reRCm746CPUJu0vhG3NPNesDJCtPYpa63MiVIjAlxeuMROoamkqJmbq69JTUht6b4UiS411_ViXgfZm4Hub6axW9zjeymFg3y3LEH123iuYNRSILLlNe4QxL01JV7U2lNtgDQW2r5vmO_RvzE6PiVKMq-bx3-hJSNCdD5vQwERfOUdMxDgFuTx7QLh6TNZJ8nwbG_dpkfaUZkvt6R6OPNchshxRWcbCOzeFdGn9c9TG4UCSEdJ5KzVWsjlxIRM2L-3_g3xOMKUooh9bA0wQs-bgCfc_vJkZFl8Ywib5GcUB1KtEisoM-7-cd3PCcW5hGgvCblRFzWq0)
 
 #### 3. Implementazione
 - **SearchController**: Implementare la logica di ricerca e visualizzazione degli utenti.
