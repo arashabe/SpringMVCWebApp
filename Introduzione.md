@@ -34,6 +34,6 @@ Il progetto è stato sviluppato seguendo il modello di sviluppo Agile, adottando
 ### Caratteristiche del Modello Agile Utilizzato
 
 - **Iterazioni Brevi**: Lo sviluppo è suddiviso in cicli brevi che permettono di ottenere feedback frequente e implementare miglioramenti in modo continuo. Questo approccio incrementale facilita l'adattamento alle modifiche e alle nuove esigenze emergenti durante il ciclo di vita del progetto.
-- **Collaborazione Stretta**: I programmatori hanno lavorato a stretto contatto per risolvere rapidamente i problemi e affinare il prodotto. La programmazione in coppia ha promosso una migliore qualità del codice e una risoluzione efficiente dei bug.
+- **Collaborazione Stretta**: Abbiamo lavorato a stretto contatto per risolvere rapidamente i problemi e affinare il prodotto. La programmazione in coppia ha promosso una migliore qualità del codice e una risoluzione efficiente dei bug.
 - **Adattamento ai Cambiamenti**: Il modello Agile consente di adattarsi ai cambiamenti nei requisiti del progetto e nelle condizioni di sviluppo, garantendo flessibilità e capacità di rispondere alle esigenze emergenti.
 - **Focus sul Valore**: L'accento è posto sulla consegna di valore reale agli utenti finali, assicurando che ogni iterazione del progetto offra miglioramenti significativi e tangibili.
