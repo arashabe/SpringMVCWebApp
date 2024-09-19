@@ -128,7 +128,7 @@ Grazie a EclEmma, abbiamo potuto identificare le aree critiche del nostro proget
 
 ### 6. **Conclusioni**
 
-Gli unit test sviluppati coprono le principali funzionalità della web app, verificando che il sistema si comporti correttamente nelle condizioni previste. L'uso di JUnit ha permesso di automatizzare il processo di test e rilevare eventuali regressioni durante lo sviluppo. La copertura del codice è soddisfacente, ma si raccomanda di aggiungere ulteriori test per coprire casi limite e condizioni di errore che potrebbero non essere stati ancora verificati.  
+Gli unit test sviluppati coprono le principali funzionalità della web app, verificando che il sistema si comporti correttamente nelle condizioni previste. L'uso di JUnit ha permesso di automatizzare il processo di test e rilevare eventuali regressioni durante lo sviluppo. La copertura del codice è soddisfacente, ma possiamo aggiungere ulteriori test per coprire casi limite e condizioni di errore che potrebbero non essere stati ancora verificati.  
 
 
 ---
