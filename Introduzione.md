@@ -29,7 +29,7 @@ Il progetto è stato realizzato dagli studenti **Arash Abedi** e **Daniele Alber
 
 ## Modello di Sviluppo
 
-Il progetto è stato sviluppato seguendo il modello di sviluppo Agile, adottando pratiche di sviluppo incrementale e programmazione in coppia. I programmatori **John** e **Mark** hanno collaborato strettamente, utilizzando un approccio iterativo per garantire una continua consegna di valore e una risposta rapida ai cambiamenti nei requisiti.
+Il progetto è stato sviluppato seguendo il modello di sviluppo Agile, adottando pratiche di sviluppo incrementale e programmazione in coppia. Abbiamo collaborato strettamente, utilizzando un approccio iterativo per garantire una continua consegna di valore e una risposta rapida ai cambiamenti nei requisiti.
 
 ### Caratteristiche del Modello Agile Utilizzato
 
