@@ -50,7 +50,7 @@ La pagina delle notifiche mostra le notifiche recenti agli utenti.
 
 ## Come Usare
 
-1. **Clonaare il Repository**: Usare `git clone` per clonare il repository sul tuo ambiente locale.
+1. **Clonare il Repository**: Usare `git clone` per clonare il repository sul tuo ambiente locale.
 2. **Installare le Dipendenze**: Eseguire `mvn install` per installare le dipendenze del progetto.
 3. **Avviare l'Applicazione**: Usare `mvn spring-boot:run` per avviare l'applicazione.
 4. **Accedere all'Applicazione**: Aprire il browser e vai su `http://localhost:8080`.
