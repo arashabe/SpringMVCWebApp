@@ -15,7 +15,7 @@ Il progetto è stato realizzato dagli studenti **Arash Abedi** e **Daniele Alber
 - **Registrazione e Login**: Consente agli utenti di creare un account e accedere al sistema con autenticazione sicura tramite **Spring Security**.
 - **Aggiornamento Profilo**: Gli utenti possono modificare le loro informazioni personali tramite una semplice interfaccia, con supporto per la gestione delle credenziali e dei dati di contatto.
 - **Notifiche**: Un sistema di notifiche per avvisare gli utenti su nuove opportunità di gruppo e aggiornamenti importanti.
-- **Gestione dei Gruppi di Studio**: Permette la creazione, la modifica e la gestione dei gruppi di studio, facilitando l'interazione tra studenti con interessi comuni.
+- **Gestione dei Gruppi di Studio**: Permette la creazione dei gruppi di studio, facilitando l'interazione tra studenti con interessi comuni.
 
 ## Tecnologie Utilizzate
 
