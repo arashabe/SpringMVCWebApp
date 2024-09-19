@@ -1,4 +1,4 @@
-### Documento di Design dell’Architettura Software
+## Documento di Design dell’Architettura Software
 
 #### 1. Introduzione
 
@@ -112,3 +112,7 @@ L'autenticazione e l'autorizzazione degli utenti sono gestite tramite **Spring S
 #### 6. Conclusioni
 
 Il design dell'architettura presentato in questo documento fornisce una soluzione modulare, scalabile e sicura per la gestione di una piattaforma che permette la formazione di gruppi di studio online. L’utilizzo di pattern consolidati come MVC e l'integrazione di strumenti come Spring Security e JPA garantiscono la robustezza e l'efficienza del sistema.
+
+## Next
+
+- [Documenti per l’Analisi Dinamica](https://github.com/arashabe/ums/blob/main/Documenti%20per%20l%E2%80%99Analisi%20Dinamica%20Junit.md)
