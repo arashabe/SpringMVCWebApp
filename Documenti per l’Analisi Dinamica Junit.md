@@ -120,13 +120,9 @@ public void testChangePasswordWithValidData() {
 
 ### 5. **Copertura del Codice**
 
-Utilizzando **EclEmma**, sono stati prodotti i seguenti risultati di copertura del codice per i test unitari:
+Abbiamo utilizzato EclEmma, uno strumento di analisi della copertura del codice integrato in Eclipse, che permette di misurare quanto del codice sorgente viene effettivamente eseguito durante i test unitari. Questo strumento è stato scelto per ottenere una visione chiara della qualità dei nostri test, evidenziando le parti di codice non coperte e aiutandoci a individuare eventuali punti deboli nel sistema.
 
-- **Copertura delle Classi**: 85%
-- **Copertura dei Metodi**: 78%
-- **Copertura delle Linee di Codice**: 82%
-
-L'obiettivo di mantenere una copertura del codice superiore al 80% è stato raggiunto per le linee di codice, tuttavia la copertura dei metodi potrebbe essere migliorata con ulteriori test per verificare casi limite e scenari di errore.
+Grazie a EclEmma, abbiamo potuto identificare le aree critiche del nostro progetto che richiedono un miglioramento in termini di test. In particolare, sebbene la copertura delle linee di codice sia soddisfacente, la copertura dei metodi potrebbe essere ulteriormente migliorata per garantire una verifica più completa dei casi limite e degli scenari di errore.
 
 ---
 
