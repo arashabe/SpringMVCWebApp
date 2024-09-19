@@ -37,3 +37,8 @@ Il progetto è stato sviluppato seguendo il modello di sviluppo Agile, adottando
 - **Collaborazione Stretta**: Abbiamo lavorato a stretto contatto per risolvere rapidamente i problemi e affinare il prodotto. La programmazione in coppia ha promosso una migliore qualità del codice e una risoluzione efficiente dei bug.
 - **Adattamento ai Cambiamenti**: Il modello Agile consente di adattarsi ai cambiamenti nei requisiti del progetto e nelle condizioni di sviluppo, garantendo flessibilità e capacità di rispondere alle esigenze emergenti.
 - **Focus sul Valore**: L'accento è posto sulla consegna di valore reale agli utenti finali, assicurando che ogni iterazione del progetto offra miglioramenti significativi e tangibili.
+
+## Next
+
+- [Specifiche dei Requisiti](https://github.com/arashabe/ums/blob/main/Documento%20di%20Specifica%20dei%20Requisiti%20Software.md)
+
