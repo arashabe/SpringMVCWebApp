@@ -48,7 +48,7 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
 4. **Costruire e avviare l'applicazione**:
    ```bash
    mvn spring-boot:run
-5. **Accedere all'applicazione aprire il browser e andare su http://localhost:8080.**
+5. **Accedere all'applicazione tramite un browser e l'indirizzo: http://localhost:8080.**
 
 ## Indice
 
