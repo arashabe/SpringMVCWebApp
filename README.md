@@ -59,9 +59,7 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
 - [Documento di Testing delle API con Postman](https://github.com/arashabe/ums/blob/main/Documento%20di%20Testing%20delle%20API%20con%20Postman.md)
 - [Demo del Progetto](https://github.com/arashabe/ums/blob/main/images/demo.md)
 
-### Contributori
 
-- Arash Abedi & Daniele Alberti 
 
 
    
