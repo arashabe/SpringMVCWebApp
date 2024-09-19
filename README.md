@@ -1,7 +1,7 @@
 ![Logo Università](https://www.unibg.it/themes/custom/unibg/logo.svg)  <!-- Sostituisci con il percorso effettivo al logo dell'università -->
 
 - Il corso di **Progettazione, algoritmi e computabilità** per l'anno accademico **2023/2024**.
-- Studenti: Arash Abedi & Daniele Alberti
+- Studenti: **Arash Abedi** & **Daniele Alberti**
 
 # University Management System (UMS)
 
@@ -50,7 +50,7 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
    mvn spring-boot:run
 5. **Accedere all'applicazione aprire il browser e andare su http://localhost:8080.**
 
-### Indice
+## Indice
 
 - [Introduzione](https://github.com/arashabe/ums/blob/main/Introduzione.md)
 - [Specifiche dei Requisiti](https://github.com/arashabe/ums/blob/main/Documento%20di%20Specifica%20dei%20Requisiti%20Software.md)
