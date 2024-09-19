@@ -27,7 +27,9 @@ L'Iterazione 3 si concentra sullo sviluppo delle interfacce utente (view) dell'a
 - Bootstrap è stato integrato per creare layout responsive che si adattano automaticamente alle diverse dimensioni dello schermo.
   
 **Modelli UML:**
-- **Class Diagram:** Aggiornato per includere i controller che gestiscono le operazioni CRUD (ad esempio, `StudentController`) e le classi di servizio coinvolte nella gestione delle view dinamiche.
+- **Component Diagram:** : I componenti di frontend (view) e backend (controller e servizi) vengono rappresentati in modo separato ma collegati da chiamate HTTP.
+
+![Component Diagram](https://www.planttext.com/api/plantuml/png/ZLGxRuCm4Dxv5LQcLYBg7aKeQlh8KBK8I9Sg0wKNOjN1w71QHLN_Umr4n8rzJfYGlmU-x-wODIf7jTkA8AZpuZClWOqUK5OAgeyH-mcOVjwUPCah5cjmnQPJTlKQleiTNBCewl44Ijuep1MNFjf2Ri43noZNNFWOAUHOR3o4PwducXVTHHgQPrSr7aU7Wxck7QKGW2isOOiiYrdyacRiHhGeMMzdi6m0JOpqmeu4QEKos3YaZ_TQkT5SLro3y71CwUiUTkJPEVGdbBZfK3hgpi84AAFA50U_nkpTwXThz4oRjftpi4I0wjXtN_2au2AI8qudrmxEIQF2SP5jHGhunOl3JAVX7eIGtsxp16hPS2LntxEJK69UbSuTC2yopD7mBMe9V9cVSVa__gUz8CKd2q2qnoztpF_bOch-BGTdq-W5EDDjoz9ixeJDa-KTapNWSPrcUeNQV_eV)
 
 #### **5. Implementazione**
 Durante questa iterazione, viene implementata una serie di view per gestire le principali funzionalità dell'applicazione, utilizzando Thymeleaf per la generazione dinamica delle pagine e Bootstrap per il layout responsive.
