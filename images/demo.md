@@ -50,10 +50,11 @@ La pagina delle notifiche mostra le notifiche recenti agli utenti.
 
 ## Come Usare
 
-1. **Clonare il Repository**: Usare `git clone` per clonare il repository sul tuo ambiente locale.
-2. **Installare le Dipendenze**: Eseguire `mvn install` per installare le dipendenze del progetto.
-3. **Avviare l'Applicazione**: Usare `mvn spring-boot:run` per avviare l'applicazione.
-4. **Accedere all'Applicazione**: Aprire il browser e vai su `http://localhost:8080`.
+1. **Clonare il Repository**: Utilizzare git clone per clonare il repository sul proprio ambiente locale.
+2. **Importare il progetto in STS**: Aprire Spring Tool Suite (STS) e importare il progetto come Maven Project.
+3. **Installare le Dipendenze**: Una volta importato, STS scaricherà automaticamente le dipendenze del progetto.
+4. **Avviare l'applicazione**: selezionare Run As > Spring Boot App per avviare l'applicazione.
+5. **Accedere all'applicazione**:Aprire il browser e navigare su http://localhost:8080.
 
 
 
