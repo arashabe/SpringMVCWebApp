@@ -38,6 +38,43 @@ L'applicazione è progettata utilizzando un'architettura a tre livelli composta 
     - **Notification**: Rappresenta le notifiche inviate tra utenti.
     - **Role**: Gestisce i ruoli degli utenti (es. utente standard, amministratore).
 
+
+#### Flusso di Dati nell'Applicazione
+
+1. **Richiesta di Registrazione**
+   - L'utente accede alla pagina di registrazione e invia il form con i dati.
+   - Il `UserRegistrationController` riceve la richiesta POST, chiama il `UserService` per creare un nuovo utente e lo salva nel database attraverso il `UserRepository`.
+   - In caso di successo, l'utente viene reindirizzato a una pagina di conferma con un messaggio di successo.
+
+2. **Visualizzazione Profilo**
+   - Quando un utente autenticato accede alla pagina del profilo, il `UserProfileController` recupera le informazioni dal `UserService` tramite l'email dell'utente autenticato.
+   - Le informazioni utente vengono aggiunte al modello e passate alla vista (`profile.html`), che visualizza i dati.
+
+3. **Invio di una Richiesta di Gruppo**
+   - Un utente autenticato invia una richiesta per formare un gruppo di studio.
+   - Il `NotificationController` gestisce la richiesta, salva una notifica nel database tramite `NotificationService`, e reindirizza l'utente alla pagina di ricerca con un messaggio di conferma.
+
+4. **Gestione delle Notifiche**
+   - Il `NotificationController` gestisce la visualizzazione delle notifiche. Recupera le notifiche dal database attraverso il `NotificationService` e le passa alla vista `notifications.html`, dove vengono mostrate all'utente.
+
+### Analisi della Complessità
+
+#### Ricerca Utenti
+- **Metodo coinvolto**: `userService.searchUsers(query)`
+- La ricerca di utenti nel sistema avviene attraverso query al database. Se il numero di utenti aumenta significativamente, la complessità di questa operazione può diventare rilevante.
+- La complessità computazionale di una ricerca utente dipende dall'implementazione della query e dall'indicizzazione nel database. Nel caso di una query lineare (ad es., ricerca senza indici), la complessità è **O(n)**, dove **n** è il numero di utenti nel database. Se viene implementata una query indicizzata, la complessità può essere ridotta a **O(log n)**.
+
+#### Gestione delle Notifiche
+- **Metodo coinvolto**: `notificationService.getNotificationsForUser(userEmail)`
+- La complessità della visualizzazione delle notifiche è anch'essa legata alla dimensione del dataset. Poiché recuperiamo tutte le notifiche di un singolo utente, la complessità di questa operazione è **O(m)**, dove **m** è il numero di notifiche associate all'utente.
+- Ottimizzazioni, come la paginazione o la gestione delle notifiche non lette, possono ridurre l'overhead computazionale e migliorare le prestazioni.
+
+#### Invio di Richieste di Gruppo
+- **Metodo coinvolto**: `notificationService.saveGroupRequestNotification(senderEmail, recipientEmail)`
+- L'invio di una richiesta di gruppo comporta l'aggiunta di una nuova notifica nel database. Questa operazione è in generale **O(1)** per quanto riguarda il tempo di inserimento, se il database utilizza una struttura indicizzata o bilanciata per le operazioni di inserimento.
+  
+
+
 ##### 2.3 Diagramma dell'architettura
 
 ![Diagramma delle Classi](https://www.planttext.com/api/plantuml/png/ZPC_JyCm4CLtVufJzowC3AZyapfKg2I51J4SxZLOE7OuEq24-ExObeZi9Y0swvtVxzdFyifvPD-tMhWNPJfaR47QjhE6ZA_ze0cOf4VJQ19YdC1Yo-J20hso1ZOu42_WKm0yx9w7bZJX0NRKTXezkSUernqhqy2bDPwjriH1_YgG5xrJXfo3ZMsKBA1tZhWcVbEI4kp6UdLGCgMFUacxGezmBcK27g4gwgnJtl8meUMZAV097HMqzGdyw6d_xFLXkJoRBG1EuLxHErHazXIdOdPNikSL15z5hpqv3rksyOf_U-Vg2enSXZMQlKwO8cdCpee9rgX0Lh6OpvYabvJY00NjE361yhA3-xOd7k3wWsGV0UBNeF-OnIgyGVm7tm00)
