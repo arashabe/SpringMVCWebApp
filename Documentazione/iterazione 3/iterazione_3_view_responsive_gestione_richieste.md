@@ -19,7 +19,7 @@ L'Iterazione 3 si concentra sullo sviluppo delle interfacce utente (view) dell'a
 **Requisiti Non Funzionali:**
 - Le view devono essere ottimizzate per tempi di caricamento rapidi.
 - Il design dell'interfaccia deve seguire le best practices per garantire un’esperienza utente intuitiva e fluida.
-- L'applicazione deve essere responsive e accessibile, conforme agli standard di web design moderni.
+- L'applicazione deve essere responsive e accessibile, conforme agli standard di web design moderni (Bootstrap).
 
 #### **4. Design**
 **Architettura:**
