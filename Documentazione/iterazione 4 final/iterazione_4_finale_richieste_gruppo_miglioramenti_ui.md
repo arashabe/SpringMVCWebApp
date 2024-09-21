@@ -44,7 +44,7 @@ In questa fase, vengono introdotte le funzionalità per inviare richieste di gru
 
 **5.2 Gestione delle Notifiche**
 - Dopo l'invio di una richiesta di gruppo, il destinatario riceve una notifica con la possibilità di accettare o rifiutare la richiesta.
-- L'interazione con le notifiche è stata ottimizzata utilizzando AJAX per evitare il ricaricamento della pagina quando si accetta o si rifiuta una richiesta.
+- L'interazione con le notifiche è stata ottimizzata utilizzando **AJAX** per **evitare il ricaricamento della pagina** quando si accetta o si rifiuta una richiesta.
 
 ```javascript
 <script>
