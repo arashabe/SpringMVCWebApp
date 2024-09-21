@@ -4,8 +4,8 @@
 Implementare la funzionalità per visualizzare e cercare utenti all'interno del sistema, oltre a inviare notifiche per la creazione di gruppi di studio.
 
 #### 1. Requisiti funzionali
-- Gli utenti possono cercare altri utenti in base a interessi comuni.
-- Gli utenti ricevono notifiche quando vengono invitati a un gruppo di studio.
+- Gli utenti possono cercare altri utenti in base a interessi comuni (skills).
+- Gli utenti ricevono notifiche quando vengono invitati per creare un gruppo di studio.
 
 #### 2. Design UML
 - **Diagramma delle classi**: Includere le classi `Notification`, `SearchController`, e `NotificationController`.
