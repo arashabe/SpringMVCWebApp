@@ -21,7 +21,7 @@ Questa fase si concentra sulla raccolta dei primi requisiti e sulla configurazio
 -  Collaborazione: GitHub per il versionamento.
 -  Testing: JUnit per test di unità, EclEmma per l'analisi della copertura.
 ### 3. Modello architetturale iniziale (UML deployment diagram)
-#### Creare un UML deployment diagram che mostri:
+#### UML deployment diagram:
 - Il client web (browser) che comunica con il backend Spring Boot.
 - Il database H2 embedded che interagisce con il backend.
 
