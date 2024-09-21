@@ -18,7 +18,7 @@ Implementare le funzionalità di base di login e registrazione degli utenti, gar
 
 #### 4. Testing
 - **JUnit**: Scrivere test di unità per validare il flusso di login e registrazione.
-- **EclEmma**: Misurare la copertura del codice con almeno l'80%.
+- **EclEmma**: Misurare la copertura del codice.
 
 #### 5. Analisi statica
 - **STAN4J**: Analisi statica per trovare eventuali errori o problemi di design.
