@@ -26,138 +26,110 @@ Di seguito sono riportati alcuni dei principali test condotti su Postman per le 
 
 #### 3.1 **Test API di Registrazione Utente**
 
-- **Endpoint**: `/api/register`
+- **Endpoint**: `/registration`
 - **Metodo HTTP**: `POST`
-- **Richiesta**:
-
-```json
-{
-  "username": "test_user",
-  "email": "test_user@example.com",
-  "password": "securePassword"
-}
+- **Richiesta** (formato form-data):
+  ```
+  {
+  "firstName": "John",
+  "lastName": "Doe",
+  "skills": "Java, Spring",
+  "courseOfStudy": "Computer Science",
+  "email": "johndoe@example.com",
+  "password": "password123"
+  }
+  ```
+- **Esempio di Script di Test Postman**:
+```
+pm.test("Verifica redirect (status 3xx)", function () {
+    pm.response.to.have.status(200);
+});
 ```
 
-- **Risultato Atteso**: 
-  - **Codice di Stato**: `201 Created`
-  - **Risposta**: Un messaggio di conferma della registrazione.
+- **Risultato Atteso**:
 
-- **Test Effettuati**:
-  - **Registrazione con dati validi**: Verifica che l'utente venga creato con successo.
-  - **Registrazione con username esistente**: Verifica che venga restituito un errore `409 Conflict`.
-  - **Registrazione con dati mancanti**: Testa la gestione degli input incompleti con il codice di errore `400 Bad Request`.
-
-#### Esempio di Risposta per Registrazione Avvenuta con Successo:
-
-```json
-{
-  "message": "User registered successfully"
-}
-```
+    - **Codice di Stato**: 200 ok, registrazione avvenuta con successo.
 
 ---
 
 #### 3.2 **Test API di Login**
 
-- **Endpoint**: `/api/login`
+- **Endpoint**: `/login`
 - **Metodo HTTP**: `POST`
-- **Richiesta**:
-
-```json
-{
-  "username": "test_user",
-  "password": "securePassword"
-}
-```
-
-- **Risultato Atteso**: 
-  - **Codice di Stato**: `200 OK`
-  - **Risposta**: Un token JWT per l'autenticazione nelle richieste successive.
-
-- **Test Effettuati**:
-  - **Login con credenziali valide**: Verifica la ricezione di un token JWT.
-  - **Login con credenziali errate**: Verifica che venga restituito un errore `401 Unauthorized`.
-  - **Login con account disabilitato**: Verifica che venga gestito il caso con un messaggio di errore specifico.
-
-#### Esempio di Risposta per Login Avvenuto con Successo:
-
-```json
-{
-  "token": "eyJhbGciOiJIUzUxMiJ9..."
-}
-```
-
----
-
-#### 3.3 **Test API di Recupero Notifiche**
-
-- **Endpoint**: `/api/notifications`
-- **Metodo HTTP**: `GET`
-- **Richiesta**: 
-
-Richiesta effettuata dopo l’autenticazione con un token JWT.
-
-- **Risultato Atteso**: 
-  - **Codice di Stato**: `200 OK`
-  - **Risposta**: Un array contenente le notifiche non lette dell’utente autenticato.
-
-- **Test Effettuati**:
-  - **Recupero di notifiche con token valido**: Verifica la corretta restituzione delle notifiche.
-  - **Recupero notifiche senza autenticazione**: Testa la gestione della mancata autenticazione con codice `401 Unauthorized`.
-
-#### Esempio di Risposta per Recupero Notifiche:
-
-```json
-[
+- **Richiesta** (formato form-data):
+  ```
   {
-    "id": 1,
-    "message": "You have been invited to join the group 'Spring Boot Enthusiasts'.",
-    "read": false
-  },
-  {
-    "id": 2,
-    "message": "Your password has been changed successfully.",
-    "read": true
+  "username": "johndoe@example.com",
+  "password": "password123"
   }
-]
+  ```
+- **Esempio di Script di Test Postman**:
 ```
+// Verifica che la risposta finale sia 200 OK
+pm.test("Verifica risposta 200 OK dopo reindirizzamento", function () {
+    pm.response.to.have.status(200);
+});
 
----
+// Verifica che la pagina contenga elementi dell'index (es. titolo, testo)
+pm.test("Verifica contenuto della pagina index", function () {
+    pm.expect(pm.response.text()).to.include('here you can find all your active groups.');
+});
 
-#### 3.4 **Test API di Ricerca Utenti**
-
-- **Endpoint**: `/api/users/search`
-- **Metodo HTTP**: `GET`
-- **Parametri di Query**: `?interest=Java`
-
+```
 - **Risultato Atteso**: 
   - **Codice di Stato**: `200 OK`
-  - **Risposta**: Un array di utenti corrispondenti al criterio di ricerca.
+  - **Reindirizzamento**: L'utente viene reindirizzato alla pagina /index dopo il login.
 
-- **Test Effettuati**:
-  - **Ricerca con criteri validi**: Verifica che venga restituito un elenco di utenti con l’interesse specificato.
-  - **Ricerca con risultati vuoti**: Testa la gestione del caso in cui non vengano trovati utenti con i criteri di ricerca.
+Questa sezione include la verifica della risposta e del contenuto della pagina di index dopo il login.
 
-#### Esempio di Risposta per Ricerca Utenti:
+---
 
-```json
-[
-  {
-    "username": "jane_doe",
-    "interests": ["Java", "Spring Boot"]
-  },
-  {
-    "username": "john_smith",
-    "interests": ["Java", "Kotlin"]
-  }
-]
+#### 3.3 **Test API di Ricerca**
+
+- **Endpoint**: `/search`
+- **Metodo HTTP**: `GET`
+- **Parametri di Query**: `?query=Java`
+#### Esempio di Script di Test Postman:
+
+```
+// Verifica che la risposta sia 200 OK
+pm.test("Verifica risposta 200 OK", function () {
+    pm.response.to.have.status(200);
+});
+
+// Verifica che il corpo della risposta contenga risultati
+pm.test("Verifica che i risultati siano presenti", function () {
+    var responseBody = pm.response.text();
+    pm.expect(responseBody).to.include("Search Results");
+});
+
+// Verifica che la query sia correttamente processata
+pm.test("Verifica che la query sia 'Java'", function () {
+    var query = pm.request.url.query.toObject();
+    pm.expect(query.query).to.eql("Java");
+});
+
+
+```
+  
+- **Risultato Atteso**:
+
+    - **Codice di Stato**: 200 OK
+    - **Risposta**: Un array di utenti corrispondenti al criterio di ricerca.
+```
+PASS
+Verifica risposta 200 OK
+PASS
+Verifica che i risultati siano presenti
+PASS
+Verifica che la query sia 'Java'
 ```
 
 ---
 
-#### 3.5 **Test API di Cambio Password**
+#### 3.4 **Test API di Cambio Password**
 
-- **Endpoint**: `/api/users/change-password`
+- **Endpoint**: `/change-password`
 - **Metodo HTTP**: `POST`
 - **Richiesta**:
 
@@ -184,18 +156,6 @@ Richiesta effettuata dopo l’autenticazione con un token JWT.
   "message": "Password changed successfully"
 }
 ```
-
----
-
-### 4. **Test delle API Autenticazione e Autorizzazione**
-
-Poiché la web app utilizza **Spring Security** per gestire l'autenticazione e l'autorizzazione, è stato necessario eseguire una serie di test mirati per verificare il corretto funzionamento del sistema di autenticazione basato su JWT.
-
-#### 4.1 **Test di Accesso Autenticato**
-- Verifica che, se un utente tenta di accedere a risorse protette senza un token JWT valido, venga restituito un codice di stato `401 Unauthorized`.
-  
-#### 4.2 **Test di Accesso a Risorse Protette**
-- Simulazione di un utente che accede a endpoint protetti, come la modifica del profilo o la creazione di notifiche, con un token JWT valido.
 
 ---
 
