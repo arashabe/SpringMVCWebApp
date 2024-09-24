@@ -42,7 +42,7 @@ L'applicazione è progettata utilizzando un'architettura a tre livelli composta 
     - **User**: Rappresenta gli utenti della piattaforma.
     - **Notification**: Rappresenta un'entità JPA che gestisce le notifiche nel sistema. Include attributi come id, senderEmail, recipientEmail, recipientSkills, message, creationDate, e status, con i relativi metodi getter e setter per l'accesso e la modifica di questi dati.
     - **Role**: Gestisce i ruoli degli utenti (es. utente standard, amministratore).
-
+---
 
 #### Flusso di Dati nell'Applicazione
 
@@ -61,7 +61,7 @@ L'applicazione è progettata utilizzando un'architettura a tre livelli composta 
 
 4. **Gestione delle Notifiche**
    - Il `NotificationController` gestisce la visualizzazione delle notifiche. Recupera le notifiche dal database attraverso il `NotificationService` e le passa alla vista `notifications.html`, dove vengono mostrate all'utente.
-
+---
 ### Analisi della Complessità
 
 #### Ricerca Utenti
@@ -78,13 +78,13 @@ L'applicazione è progettata utilizzando un'architettura a tre livelli composta 
 - **Metodo coinvolto**: `notificationService.saveGroupRequestNotification(senderEmail, recipientEmail)`
 - L'invio di una richiesta di gruppo comporta l'aggiunta di una nuova notifica nel database. Questa operazione è in generale **O(1)** per quanto riguarda il tempo di inserimento, se il database utilizza una struttura indicizzata o bilanciata per le operazioni di inserimento.
   
-
+---
 
 ##### 2.3 Diagramma dell'architettura
 
 ![Diagramma arch](https://www.planttext.com/api/plantuml/png/ZPC_JyCm4CLtVufJzowC3AZyapfKg2I51J4SxZLOE7OuEq24-ExObeZi9Y0swvtVxzdFyifvPD-tMhWNPJfaR47QjhE6ZA_ze0cOf4VJQ19YdC1Yo-J20hso1ZOu42_WKm0yx9w7bZJX0NRKTXezkSUernqhqy2bDPwjriH1_YgG5xrJXfo3ZMsKBA1tZhWcVbEI4kp6UdLGCgMFUacxGezmBcK27g4gwgnJtl8meUMZAV097HMqzGdyw6d_xFLXkJoRBG1EuLxHErHazXIdOdPNikSL15z5hpqv3rksyOf_U-Vg2enSXZMQlKwO8cdCpee9rgX0Lh6OpvYabvJY00NjE361yhA3-xOd7k3wWsGV0UBNeF-OnIgyGVm7tm00)
 
-
+---
 #### 3. Design Dettagliato delle Componenti
 
 ##### 3.1 LoginController
@@ -136,12 +136,14 @@ funzione inviaNotifica(utenteDestinatario, messaggio):
     mostraMessaggio("Notifica inviata con successo")
 ```
 
+---
 #### 4. Diagrammi UML delle Classi Principali
 
 ##### 4.1 Diagramma delle Classi (Esempio semplificato)
 
 ![Diagramma delle Classi](https://www.planttext.com/api/plantuml/png/TL3B2i903BplLomzATA3Lm_IWqVneFW1eOqbi0_Pf8A8_sww2cwnNfRip6GoISC2IGRlJEk0sPuPatqOQ_Snz9OwhKwIIEj1cG0UlmXw86UUvjDwY48NQa4eXdaBZypGznGLoeC6mI2uGnOAe46KKRjCrVKsQuvuZKmIqzrkRBMkp6JCg2g17tMnLi6DwLQMmTrWyGwYpt9-bJzjanYX-6IR1aCt7lK5)
 
+---
 #### 5. Scelte Progettuali
 
 ##### 5.1 Pattern Architetturali
