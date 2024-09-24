@@ -20,22 +20,27 @@ L'applicazione è progettata utilizzando un'architettura a tre livelli composta 
 ##### 2.2 Componenti principali dell’architettura
 
 1. **Controller**: I controller di Spring elaborano le richieste HTTP e orchestrano le interazioni tra la vista e il modello. Alcuni esempi di controller sono:
-    - **LoginController**: Gestisce le richieste di login.
+    - **ChangePasswordController**: Gestisce la logica per mostrare il modulo di cambio password e processare la richiesta di modifica della password dell'utente autenticato.
+    - **HomeController**: Gestisce il reindirizzamento alla pagina di login e reindirizza la homepage alla pagina "index".
+    - **IndexController**: Gestisce la logica per visualizzare la pagina "index" e recupera le notifiche per l'utente autenticato, aggiungendole al modello per la visualizzazione.
+    - **SearchController**: Gestisce la logica per la ricerca di utenti in base a una query e per l'invio di richieste di creazione di gruppo tramite notifiche tra utenti.
     - **RegistrationController**: Gestisce le richieste di registrazione e validazione delle informazioni.
-    - **ProfileController**: Permette agli utenti di visualizzare e aggiornare i propri profili.
+    - **UserProfileController**: Gestisce la visualizzazione e l'aggiornamento del profilo dell'utente autenticato, consentendo di mostrare i dati dell'utente e di salvarne eventuali modifiche tramite il servizio UserService.
     - **NotificationController**: Gestisce l'invio e la ricezione di notifiche per formare gruppi di studio.
 
 2. **Service Layer**: Contiene la logica di business dell'applicazione. Gli oggetti service si occupano di eseguire operazioni complesse, come la gestione delle password e delle notifiche. Alcuni servizi includono:
-    - **UserService**: Responsabile della gestione degli utenti (registrazione, aggiornamento profilo, ecc.).
-    - **NotificationService**: Gestisce l'invio di notifiche agli utenti.
+    - **NotificationService**: Definisce i metodi per gestire le notifiche, inclusa la creazione, il salvataggio e il recupero di notifiche per singoli o due utenti, nonché la ricerca di notifiche tramite ID.
+    - **NotificationServiceImpl**: Implementa l'interfaccia NotificationService, gestendo il salvataggio delle notifiche di richieste di gruppo, il recupero di notifiche per singoli utenti o due utenti, e l'aggiornamento delle notifiche nel database tramite il repository JPA.
+    - **UserService**: Estende UserDetailsService di Spring Security e definisce i servizi per gestire gli utenti, inclusi la registrazione, l'aggiornamento delle informazioni, il controllo delle password, la modifica delle password e la ricerca di utenti, per integrare l'autenticazione e la sicurezza nel sistema.
+    - **UserServiceImpl**: Implementa la logica di business per la registrazione, ricerca, aggiornamento e autenticazione degli utenti, integrandosi con Spring Security per la gestione delle password e dei ruoli.
 
 3. **Repository Layer**: Utilizza **JPA** per l'interazione con il database. Le classi repository forniscono metodi per eseguire query e operazioni CRUD (Create, Read, Update, Delete). Alcuni repository includono:
-    - **UserRepository**: Permette la gestione dei dati relativi agli utenti.
-    - **NotificationRepository**: Permette la gestione delle notifiche inviate e ricevute dagli utenti.
+    - **UserRepository**: Estende JpaRepository e definisce metodi per trovare un utente tramite email e per cercare utenti in base a nome, cognome, competenze e corso di studio.
+    - **NotificationRepository**: Estende JpaRepository e definisce metodi per recuperare le notifiche in base all'email del destinatario e per ottenere notifiche per due utenti con uno stato specifico.
 
 4. **Entity Layer**: Contiene le classi che mappano le tabelle del database. Gli oggetti in questo livello rappresentano le entità del sistema, come:
     - **User**: Rappresenta gli utenti della piattaforma.
-    - **Notification**: Rappresenta le notifiche inviate tra utenti.
+    - **Notification**: Rappresenta un'entità JPA che gestisce le notifiche nel sistema. Include attributi come id, senderEmail, recipientEmail, recipientSkills, message, creationDate, e status, con i relativi metodi getter e setter per l'accesso e la modifica di questi dati.
     - **Role**: Gestisce i ruoli degli utenti (es. utente standard, amministratore).
 
 
