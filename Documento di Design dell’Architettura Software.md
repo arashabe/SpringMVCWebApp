@@ -10,9 +10,9 @@ L'architettura del sistema segue il pattern **Model-View-Controller (MVC)**, che
 
 #### 2. Descrizione dell’Architettura
 
-##### 2.1 Architettura a tre livelli (MVC)
+##### 2.1 Architettura MVC
 
-L'applicazione è progettata utilizzando un'architettura a tre livelli composta da:
+L'applicazione è progettata utilizzando un'architettura MVC composta da:
 - **Presentation Layer (View)**: Gestisce l'interfaccia utente e la visualizzazione delle informazioni. In questo livello, viene utilizzato **Thymeleaf** come motore di template per generare dinamicamente le pagine HTML.
 - **Business Logic Layer (Controller)**: Gestisce la logica di business e l'elaborazione delle richieste provenienti dalla vista. Utilizza i **Controller di Spring** per coordinare le operazioni tra la vista e il modello.
 - **Data Access Layer (Model)**: Gestisce l'accesso ai dati e la persistenza. Questa parte dell'architettura utilizza **JPA (Java Persistence API)** e **H2 Database** per l'interazione con il database.
