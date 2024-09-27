@@ -128,5 +128,5 @@ Per eseguire i test, ho avviato prima l'applicazione Spring Boot. Una volta che 
 npm run test:e2e:dashboard
 ```
 
-Questo comando ha avviato Playwright e ha eseguito lo script associato.
+
 
