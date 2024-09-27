@@ -52,6 +52,7 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
 - [Documenti per l’Analisi Dinamica](https://github.com/arashabe/ums/blob/main/Documenti%20per%20l%E2%80%99Analisi%20Dinamica%20Junit.md)
 - [Documento di Testing delle API con Postman](https://github.com/arashabe/ums/blob/main/Documento%20di%20Testing%20delle%20API%20con%20Postman.md)
 - [Documento per l’Analisi Statica](https://github.com/arashabe/ums/blob/main/Documenti%20per%20l%E2%80%99Analisi%20Statica.md)
+- [Documentazione sui Test End-to-End con Playwright](https://github.com/arashabe/ums/blob/main/Documentazione%20sui%20Test%20End-to-End%20con%20Playwright.md)
 - [Demo del Progetto](https://github.com/arashabe/ums/blob/main/images/demo.md)
 
 
