@@ -1,0 +1,16 @@
+{
+  "name": "ums-webapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:e2e:login": "node src/test/java/end-to-end-playwright/login-page-screenshot-test.js",
+    "test:e2e:dashboard": "node src/test/java/end-to-end-playwright/dashboard-page-test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "playwright": "^1.47.2"
+  }
+}
