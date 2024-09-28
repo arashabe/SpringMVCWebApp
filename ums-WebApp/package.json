@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+	"test:e2e:registration": "node src/test/java/end-to-end-playwright/registration-page-test.js",
     "test:e2e:login": "node src/test/java/end-to-end-playwright/login-page-screenshot-test.js",
     "test:e2e:dashboard": "node src/test/java/end-to-end-playwright/dashboard-page-test.js"
   },
