@@ -23,6 +23,7 @@ Il **University Management System (UMS)** è una web app progettata per facilita
 - **Thymeleaf**: Motore di template per la generazione di pagine web.
 - **H2 Database**: Database embedded per lo sviluppo e il test.
 - **JUnit**: Framework per la scrittura di test unitari.
+- **Playwright**: Un framework per il test e l'automazione web. Permette di testare Chromium, Firefox e WebKit utilizzando un'unica API.
 - **Maven**: Sistema di gestione dei progetti e delle dipendenze.
 
 ## Modello di Sviluppo
