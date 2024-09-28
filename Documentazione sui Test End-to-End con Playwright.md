@@ -32,7 +32,7 @@ ums-WebApp\src\test\java\end-to-end-playwright
 
 Per gestire le dipendenze e gli script di test, ho creato un file `package.json` nella cartella di test. Questo file definisce il progetto e specifica le dipendenze necessarie, così come gli script che possono essere eseguiti.
 
-Ecco come appare il mio `package.json`:
+`package.json`:
 
 ```json
 {
