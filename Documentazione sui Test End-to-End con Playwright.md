@@ -175,7 +175,7 @@ const { chromium } = require('playwright');
 ```
 npm run test:e2e:dashboard
 ```
----
+
 ## Esecuzione dei Test
 
 Per eseguire i test, ho avviato prima l'applicazione Spring Boot. Una volta che l'applicazione era in esecuzione, ho eseguito il test desiderato utilizzando npm. Ad esempio, per eseguire il test della dashboard, ho utilizzato il comando:
@@ -184,6 +184,8 @@ Terminal:
 ```bash
 npm run test:e2e:dashboard
 ```
-
+---
+## Conclusione
+`Postman` è utilizzato principalmente per testare e sviluppare API, permettendo di inviare richieste HTTP e analizzare le risposte. `Playwright`, invece, è un framework per l'automazione end-to-end di applicazioni web, che consente di simulare l'interazione degli utenti con browser come Chromium, Firefox e WebKit.
 
 
