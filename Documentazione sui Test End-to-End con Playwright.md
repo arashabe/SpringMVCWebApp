@@ -40,6 +40,7 @@ Ecco come appare il mio `package.json`:
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+   "test:e2e:registration": "node src/test/java/end-to-end-playwright/registration-page-test.js",
     "test:e2e:login": "node src/test/java/end-to-end-playwright/login-page-screenshot-test.js",
     "test:e2e:dashboard": "node src/test/java/end-to-end-playwright/dashboard-page-test.js"
   },
@@ -52,17 +53,65 @@ Ecco come appare il mio `package.json`:
   }
 }
 
+
 ```
 
 ## Test Eseguiti
 
+### 1. Test di Registrazione
+
+#### Ho implementato un test per verificare se un utente può accedere alla pagina di registrazione e completare con successo il processo di registrazione. Lo script registration-page-test.js esegue le seguenti operazioni:
+- Avvia un'istanza del browser Chromium (una versione open-source di Chrome) in modalità non headless.
+- Apre una nuova pagina all'interno del browser.
+- Il browser carica la pagina web all'indirizzo `http://localhost:8080/registration`.
+- Dopo che l'utente si è registrato con successo, viene salvata un'immagine della pagina.
+- L'immagine risultante dal test si trova nella directory: /ums/tree/main/ums-WebApp.
 
 
-### 1. Test di Login
+```
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch({ headless: false });
+  const page = await browser.newPage();
+
+  await page.goto('http://localhost:8080/registration');
+  
+  await page.fill('#firstName', 'John');
+  await page.fill('#lastName', 'Rossi');
+  await page.fill('#skills', 'Java');
+  await page.fill('#courseOfStudy', 'Computer Science');
+  await page.fill('#email', 'john@example.com');
+  await page.fill('#password', '123456');
+
+  await page.click('button[type="submit"]');
+  
+  await page.waitForSelector('.alert-info');
+
+  const successMessage = await page.textContent('.alert-info');
+  if (successMessage.includes("You've successfully registered")) {
+    console.log('La registrazione è avvenuta con successo.');
+  } else {
+    console.log('La registrazione non è riuscita.');
+  }
+
+  await page.screenshot({ path: `registration-screenshot.png` });
+
+  await browser.close();
+})();
+
+```
+#### Eseguzione test:
+```
+npm run test:e2e:registration
+```
+
+
+### 2. Test di Login
 
 #### Ho implementato un test per verificare se un utente può accedere alla pagina di login. Lo script `login-page-screenshot-test.js` esegue le seguenti operazioni:
 - Avviamo un'istanza del browser Chromium (una versione open-source di Chrome) in modalità headless
-- Si apre una nuova pagina all'interno del browser
+- Apre una nuova pagina all'interno del browser.
 - Il browser carica la pagina web che si trova all'indirizzo http://localhost:8080
 - Salviamo l'immagine della pagina login con il nome screenshot-login-page-to-fill-playwright.png
 
@@ -78,9 +127,12 @@ const { chromium } = require('playwright');
 })();
 
 ```
+#### Eseguzione test:
+```
+npm run test:e2e:login
+```
 
-
-### 2. Test della Dashboard
+### 3. Test della Dashboard
 
 #### Ho creato un secondo test, `dashboard-page-test.js`, per verificare che il contenuto della pagina dashboard fosse corretto. Questo test:
 - Accediamo alla pagina di login
@@ -119,11 +171,16 @@ const { chromium } = require('playwright');
 })();
 
 ```
-
+#### Eseguzione test:
+```
+npm run test:e2e:dashboard
+```
+---
 ## Esecuzione dei Test
 
 Per eseguire i test, ho avviato prima l'applicazione Spring Boot. Una volta che l'applicazione era in esecuzione, ho eseguito il test desiderato utilizzando npm. Ad esempio, per eseguire il test della dashboard, ho utilizzato il comando:
 
+Terminal:
 ```bash
 npm run test:e2e:dashboard
 ```
