@@ -24,6 +24,7 @@ Il **University Management System (UMS)** è una web app progettata per facilita
 - **H2 Database**: Database embedded per lo sviluppo e il test.
 - **JUnit**: Framework per la scrittura di test unitari.
 - **Playwright**: Un framework per il test e l'automazione web. Permette di testare Chromium, Firefox e WebKit utilizzando un'unica API.
+- **Postman**: Una piattaforma per sviluppatori che facilita il testing, lo sviluppo e la documentazione delle API tramite un'interfaccia intuitiva.
 - **Maven**: Sistema di gestione dei progetti e delle dipendenze.
 
 ## Modello di Sviluppo
