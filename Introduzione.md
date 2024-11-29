@@ -1,4 +1,4 @@
-![Logo Università](https://www.unibg.it/themes/custom/unibg/logo.svg)  <!-- Sostituisci con il percorso effettivo al logo dell'università -->
+![Logo Università](https://www.unibg.it/themes/custom/unibg/logo.svg) 
 
 # SpringMVCWebApp
 
