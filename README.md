@@ -3,11 +3,11 @@
 - Il corso di **Progettazione, algoritmi e computabilità** per l'anno accademico **2023/2024**.
 - Studenti: **Arash Abedi** & **Daniele Alberti**
 
-# University Management System (UMS)
+# SpringMVCWebApp
 
 ## Descrizione del Progetto
 
-Il **University Management System (UMS)** è una web app progettata per facilitare la comunicazione e la collaborazione tra studenti universitari. Gli utenti possono registrarsi, fare login, aggiornare i loro profili e inviare notifiche per formare gruppi di studio basati su interessi comuni. Il sistema non gestisce direttamente gli studenti, ma permette loro di interagire e organizzarsi autonomamente in gruppi di studio.
+Una web app progettata per facilitare la comunicazione e la collaborazione tra studenti universitari. Gli utenti possono registrarsi, fare login, aggiornare i loro profili e inviare notifiche per formare gruppi di studio basati su interessi comuni. Il sistema non gestisce direttamente gli studenti, ma permette loro di interagire e organizzarsi autonomamente in gruppi di studio.
 
 ## Caratteristiche Principali
 
