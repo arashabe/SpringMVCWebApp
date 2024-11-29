@@ -1,4 +1,4 @@
-![Logo Università](https://www.unibg.it/themes/custom/unibg/logo.svg)  <!-- Sostituisci con il percorso effettivo al logo dell'università -->
+![Logo Università](https://www.unibg.it/themes/custom/unibg/logo.svg) 
 
 - Il corso di **Progettazione, algoritmi e computabilità** per l'anno accademico **2023/2024**.
 - Studenti: **Arash Abedi** & **Daniele Alberti**
