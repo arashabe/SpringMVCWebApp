@@ -1,10 +1,10 @@
 ![Logo Università](https://www.unibg.it/themes/custom/unibg/logo.svg)  <!-- Sostituisci con il percorso effettivo al logo dell'università -->
 
-# University Management System (UMS)
+# SpringMVCWebApp
 
 ## Introduzione
 
-**University Management System (UMS)** è un'applicazione web progettata per semplificare e migliorare la comunicazione e la collaborazione tra studenti universitari. Questo progetto è stato sviluppato come parte del corso di **Progettazione, Algoritmi e Computabilità** per la laurea magistrale in **Ingegneria Informatica** presso l'**Università degli Studi di Bergamo** per l'anno accademico 2023/2024.
+Una web app progettata per semplificare e migliorare la comunicazione e la collaborazione tra studenti universitari. Questo progetto è stato sviluppato come parte del corso di **Progettazione, Algoritmi e Computabilità** per la laurea magistrale in **Ingegneria Informatica** presso l'**Università degli Studi di Bergamo** per l'anno accademico 2023/2024.
 
 L'obiettivo principale di UMS è fornire una piattaforma intuitiva che consenta agli studenti di connettersi, collaborare e organizzarsi in gruppi di studio basati sui loro interessi accademici e personali. Sebbene il sistema non gestisca direttamente le informazioni degli studenti, fornisce loro gli strumenti necessari per interagire e organizzarsi autonomamente in gruppi di studio. 
 
