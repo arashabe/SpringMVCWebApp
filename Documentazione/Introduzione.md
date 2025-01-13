@@ -1,5 +1,3 @@
-![Logo Università](https://www.unibg.it/themes/custom/unibg/logo.svg) 
-
 # SpringMVCWebApp
 
 ## Introduzione
@@ -40,5 +38,5 @@ Il progetto è stato sviluppato seguendo il modello di sviluppo Agile, adottando
 
 ## Next
 
-- [Specifiche dei Requisiti](https://github.com/arashabe/ums/blob/main/Documento%20di%20Specifica%20dei%20Requisiti%20Software.md)
+- [Specifiche dei Requisiti](../Documentazione/Documento%20di%20Specifica%20dei%20Requisiti%20Software.md)
 

@@ -1,9 +1,9 @@
-![Logo Università](https://www.unibg.it/themes/custom/unibg/logo.svg) 
+# SpringMVCWebApp
 
 - Il corso di **Progettazione, algoritmi e computabilità** per l'anno accademico **2023/2024**.
 - Studenti: **Arash Abedi** & **Daniele Alberti**
 
-# SpringMVCWebApp
+
 
 ## Descrizione del Progetto
 
@@ -49,14 +49,14 @@ Il progetto è stato sviluppato utilizzando il **modello di sviluppo Agile**. In
 
 ## Indice
 
-- [Introduzione](https://github.com/arashabe/ums/blob/main/Introduzione.md)
-- [Specifiche dei Requisiti](https://github.com/arashabe/ums/blob/main/Documento%20di%20Specifica%20dei%20Requisiti%20Software.md)
-- [Design dell'Architettura](https://github.com/arashabe/ums/blob/main/Documento%20di%20Design%20dell%E2%80%99Architettura%20Software.md)
-- [Documenti per l’Analisi Dinamica](https://github.com/arashabe/ums/blob/main/Documenti%20per%20l%E2%80%99Analisi%20Dinamica%20Junit.md)
-- [Documento di Testing delle API con Postman](https://github.com/arashabe/ums/blob/main/Documento%20di%20Testing%20delle%20API%20con%20Postman.md)
-- [Documento per l’Analisi Statica](https://github.com/arashabe/ums/blob/main/Documenti%20per%20l%E2%80%99Analisi%20Statica.md)
-- [Documentazione sui Test End-to-End con Playwright](https://github.com/arashabe/ums/blob/main/Documentazione%20sui%20Test%20End-to-End%20con%20Playwright.md)
-- [Demo del Progetto](https://github.com/arashabe/ums/blob/main/images/demo.md)
+- [Introduzione](Documentazione/Introduzione.md)
+- [Specifiche dei Requisiti](Documentazione/Documento%20di%20Specifica%20dei%20Requisiti%20Software.md)
+- [Design dell'Architettura](Documentazione/Documento%20di%20Design%20dell%E2%80%99Architettura%20Software.md)
+- [Documento per l’Analisi Dinamica](Documentazione/Documento%20per%20l%E2%80%99Analisi%20Dinamica%20Junit.md)
+- [Documento di Testing delle API con Postman](Documentazione/Documento%20di%20Testing%20delle%20API%20con%20Postman.md)
+- [Documento per l’Analisi Statica](Documentazione/Documenti%20per%20l%E2%80%99Analisi%20Statica.md)
+- [Documentazione sui Test End-to-End con Playwright](Documentazione/Documentazione%20sui%20Test%20End-to-End%20con%20Playwright.md)
+- [Demo del Progetto](Documentazione/demo.md)
 
 
 

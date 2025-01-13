@@ -122,5 +122,5 @@ L'analisi statica condotta con SonarLint ha fornito un'importante panoramica del
 
 ## Next
 
-- [Documentazione sui Test End-to-End con Playwright](https://github.com/arashabe/ums/blob/main/Documentazione%20sui%20Test%20End-to-End%20con%20Playwright.md)
+- [Documentazione sui Test End-to-End con Playwright](../Documentazione/Documentazione%20sui%20Test%20End-to-End%20con%20Playwright.md)
 
