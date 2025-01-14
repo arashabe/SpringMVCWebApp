@@ -1,7 +1,8 @@
 # SpringMVCWebApp
 
-- Il corso di **Progettazione, algoritmi e computabilità** per l'anno accademico **2023/2024**.
-- Studenti: **Arash Abedi** & **Daniele Alberti**
+- Il corso di [**Progettazione, algoritmi e computabilità**](https://unibg.coursecatalogue.cineca.it/insegnamenti/2022/38090-MOD1/2021/3212/89?coorte=2022&schemaid=68843) per l'anno accademico **2023/2024**.
+- Docente: Prof.ssa Patrizia Scandurra
+- Sviluppatori: **Arash Abedi** & **Daniele Alberti**
 
 
 
